@@ -1,0 +1,32 @@
+<html><head> <title>JavaScript</title></head>
+<body>
+<script>
+    let counter = 0;
+    document.addEventListener("DOMContentLoaded", function (event) {
+        const body = document.querySelector("body");
+        let output = document.createElement("div");
+        output.innerHTML = "click the button";
+        output.style.fontSize = "2em";
+        output.style.padding = "5px";
+        output.style.fontFamily = "fantasy";
+        output.setAttribute("class","message");
+        body.appendChild(output);
+        let btn = document.createElement("button");
+        btn.innerHTML = "click me";
+        btn.addEventListener("click",function(){
+            console.log("clicked");
+        })
+        
+
+        
+        body.appendChild(btn);
+        
+        
+        
+        
+        
+        
+        
+    })
+</script>
+</body></html>

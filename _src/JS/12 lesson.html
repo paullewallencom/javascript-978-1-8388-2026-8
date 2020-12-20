@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <style>
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="output1"></div>
+    <div class="output2"></div>
+    <div class="message"></div>
+    <button>Start</button>
+    <script>
+        const myWords = ["javascript", "course", "laurence"];
+        let player = {};
+        const message = document.querySelector(".message");
+        const output1 = document.querySelector(".output1");
+        const output2 = document.querySelector(".output2");
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", function () {
+            myWords.sort(function () {
+                return .5 - Math.random();
+            });
+            let theWord = myWords.shift();
+            player.solution = theWord.split("");
+            buildBoard();
+            console.log(player.solution);
+        })
+
+        function buildBoard() {
+            player.solution.forEach(function (letter) {
+                ///console.log(letter);
+                let div = document.createElement("div");
+                div.classList.add("letter2");
+                div.innerText = "_";
+                div.myLetter = letter;
+                output2.appendChild(div);
+            })
+        }
+        
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>
